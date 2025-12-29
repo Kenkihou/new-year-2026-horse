@@ -6,7 +6,7 @@ import * as THREE from "three";
 /**
  * 馬のモデル
  */
-function HorseModel({ filename = "/horse.glb" }) {
+function HorseModel({ filename = "./horse.glb" }) {
   const { scene } = useGLTF(filename);
   useEffect(() => {
     scene.traverse((child) => {
