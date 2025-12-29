@@ -1,3 +1,4 @@
+import horseUrl from "./horse.glb?url";
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, Environment, ContactShadows, Grid } from "@react-three/drei";
@@ -224,7 +225,7 @@ export default function App() {
           <pointLight position={[0, 1, -2]} distance={10} intensity={15} color="#00ffff" />
           <Environment preset="warehouse" />
 
-          <HorseModel />
+          <HorseModel filename={horseUrl} />
           <AcrylicCase />
           <FrontGlass />
           <ScrollingNeonText />
